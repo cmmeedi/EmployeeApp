@@ -119,5 +119,7 @@ include "db_connector.php";
 $conn->close();
 ?>
 
+<h4>© Copyright, Chester Meedi 2022</h4>
+
 </body>
 </html>

@@ -1,3 +1,8 @@
+<html>
+<head>
+</head>
+
+<body>
 <?php 
 
 //and used to try to connect to the db
@@ -27,3 +32,9 @@ if($result->num_rows > 0){
 }
 
 ?>
+
+<p>© Copyright, Chester Meedi 2022</p>
+
+</body>
+
+</html>
