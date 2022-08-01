@@ -40,6 +40,36 @@ include "db_connector.php";
 //This includes the code to be able to search and display all the jokes in the DB
 
 ?>
+
+<!-- This is the Nav Bar -->
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.php">Emp-Grenade</a>
+		<button 
+		class="navbar-toggler" 
+		type="button" 
+		data-toggle="collapse" 
+		data-target="#navbarNav"
+		aria-controls="navbarNav" 
+		aria-expanded="false"
+		aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="add_Employee.php">Add Employee</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="all_Employees.php">All Employees</a>
+				</li>
+			</ul>
+			<a href="employee_Login.php" class="btn btn-light">Login</a>
+        	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
+		</div>
+	</nav>
+</header>
+
 <!-- This is the form to allow the user to search for keywords to pull up jokes containing those keywords within the db -->
     <div id="employeeSearch" class="container">
       <form action="search_employee.php">
@@ -64,53 +94,8 @@ include "db_connector.php";
 
 <hr>
 
-<!-- This is the form to allow the user to add a joke with an answer -->
-    <div id="add_Employee" class="container">
-        <form action="add_Employee.php" method="GET">
-        
-          <div class="form-group">
-            <label for="add_Employee" class="display-4">Add employee</label>
-            <br>
-            <label for="first_Name"> Employees first name </label>
-            <input
-              type="text"
-              class="form-control col-4"
-              id="first_Name"
-              name="first_Name"
-              aria-describedby="first_Name"
-            />
-            
-            <label for="last_Name"> Employees last name </label>
-            <input
-              type="text"
-              class="form-control col-4"
-              id="last_Name"
-              name="last_Name"
-              aria-describedby="last_Name"
-            />
-            
-          <label for="dept_Name"> Department of employee </label>
-          <input
-          	type="text"
-          	class="form-control col-4"
-          	id="dept_Name"
-          	name="dept_Name"
-          	aria-describedby="dept_Name"
-          />
-        </div>
-          
-        <button type="submit" class="btn btn-primary">Add</button>
-          
-        </form>
-    </div>
-    
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-5">
-        <a href="employee_Login.php" class="btn btn-primary">Login</a>
-    </div>
-    </div>
-	</div>
+
+   
 
 <?php
 
@@ -119,7 +104,10 @@ include "db_connector.php";
 $conn->close();
 ?>
 
-<h4>© Copyright, Chester Meedi 2022</h4>
 
+<footer class="text-light bg-dark text-right pt-2">
+    <h5 class="display-5">&copy Chester Meedi, 03/21/2022 ALL RIGHTS RESERVED</h5>
+</footer>
 </body>
+
 </html>
