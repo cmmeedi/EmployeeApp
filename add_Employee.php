@@ -66,7 +66,7 @@
 
 	<!-- This is the form to allow the user to add a joke with an answer -->
     <div id="add_Employee" class="container">
-        <form action="add_Employee.php" method="GET">
+        <form action="add_Employee_Process.php" method="GET">
         
           <div class="form-group">
             <label for="add_Employee" class="display-4">Add employee</label>
