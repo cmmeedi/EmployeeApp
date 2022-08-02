@@ -26,4 +26,5 @@ if($result->num_rows > 0){
     //otherwise this message is displayed to let the user know there are no results
     echo "0 results";
 }
+
 ?>
