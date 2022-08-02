@@ -3,8 +3,7 @@
 //The file with the db connection code needs to be included in this file
 include "db_connector.php";
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 
 $new_first_Name = $_GET["first_Name"];
 $new_last_Name = $_GET["last_Name"];
