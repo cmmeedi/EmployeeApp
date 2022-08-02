@@ -26,24 +26,4 @@ if($result->num_rows > 0){
     //otherwise this message is displayed to let the user know there are no results
     echo "0 results";
 }
-
-if($firstResult->num_rows > 0){
-    while($row = $firstResult->fetch_assoc()){
-        $username = $row["first_Name"] . "." .  substr($row["last_Name"], 0, 1);
-        $password = "!!" . $row["last_Name"] . "." . substr($row["first_name"], 0, 1) . "123!!";
-        echo "new Username: " . $username;
-        echo "<br>";
-        echo "new Password: " . $password;
-        
-        
-        
-        $newAcc = "INSERT INTO employee_account (ID, EMPLOYEE_NAME, EMPLOYEE_PASSWORD) VALUES (NULL, '$username', '$password')";
-        $added = $conn->query($newAcc) or die(mysqli_errno($conn));
-        
-    }
-}else{
-    echo "0 results";
-}
-
-
 ?>
