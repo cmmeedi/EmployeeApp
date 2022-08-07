@@ -91,11 +91,16 @@ include "db_connector.php";
 	</nav>
 </header>
 
-	<p class="display-4 mt-3">This is your profile homepage</p>
+	<p class="display-4 mt-3">This is your Timeclock</p>
 
 <hr>
+	
+	<?php 
+	      
+	include "time_And_Date.php";
 
-
+	
+	?>
 
    
 
