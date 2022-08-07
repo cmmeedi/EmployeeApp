@@ -95,15 +95,22 @@ include "db_connector.php";
 
 <hr>
 	
-	<?php 
-	      
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+	<?php   
 	include "time_And_Date.php";
-
-	
 	?>
-
-   
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8">
+				<button class="btn btn-dark btn-sm m-1">Clock-In</button>
+				<button class="btn btn-outline-dark btn-sm m-1">Lunch-Out</button>
+				<button class="btn btn-outline-dark btn-sm m-1">Lunch-In</button>
+				<button class="btn btn-dark btn-sm m-1">Clock-Out</button>
+			</div>
+		</div>
 <?php
 
 
