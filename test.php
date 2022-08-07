@@ -18,4 +18,3 @@ stuff here
 include 'db_connector.php';
 
 
-$username = "SELECT * FROM employees_table WHERE "

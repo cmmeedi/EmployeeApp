@@ -1,11 +1,11 @@
 <?php 
 session_start();
-setcookie($name, $value);
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,7 @@ setcookie($name, $value);
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css"/>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -32,15 +33,20 @@ setcookie($name, $value);
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
-    
-    <link rel="stylesheet" href="styles.css"/>
 
-
-    <title>Document</title>
+    <title>Employee App</title>
   </head>
-  <body>
-  
-  <!-- This is the Nav Bar -->
+<body>
+
+<?php 
+
+//This includes the code to be able to connect to the DB
+include "db_connector.php";
+//This includes the code to be able to search and display all the jokes in the DB
+
+?>
+
+<!-- This is the Nav Bar -->
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.php">Emp-Grenade</a>
@@ -56,7 +62,7 @@ setcookie($name, $value);
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="add_Employee.php">Add Employee</a>
 				</li>
 				<li class="nav-item">
@@ -66,52 +72,54 @@ setcookie($name, $value);
 			<a href="employee_Login.php" class="btn btn-light">Login</a>
         	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
 		</div>
+        <div class="container justify-content-end">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-white">
+              	<?php
+				echo "Welcome " . $_COOKIE['logged_User'] . "<br>";
+				?>
+              </p>
+         </div>
+         
+         <div class="row">
+         	<div class="col-5">
+         		<a href="employee_Settings.php" class="btn btn-outline-light btn-sm">Login</a>
+         	</div>
+         </div>
 	</nav>
 </header>
 
-	<!-- This is the form to allow the user to add a joke with an answer -->
-    <div id="add_Employee" class="container">
-        <form action="add_Employee.php" method="GET">
-        
-          <div class="form-group">
-            <label for="add_Employee" class="display-4">Add employee</label>
-            <br>
-            <label for="first_Name"> Employees first name </label>
-            <input
-              type="text"
-              class="form-control col-4"
-              id="first_Name"
-              name="first_Name"
-              aria-describedby="first_Name"
-            />
-            
-            <label for="last_Name"> Employees last name </label>
-            <input
-              type="text"
-              class="form-control col-4"
-              id="last_Name"
-              name="last_Name"
-              aria-describedby="last_Name"
-            />
-            
-          <label for="dept_Name"> Department of employee </label>
-          <input
-          	type="text"
-          	class="form-control col-4"
-          	id="dept_Name"
-          	name="dept_Name"
-          	aria-describedby="dept_Name"
-          />
-        </div>
-          
-        <button type="submit" class="btn btn-primary">Add</button>
-          
-        </form>
-    </div>
-    
+	<div class="container justify-content-end">
+		<div class="row">
+		
+			<div class="col-8 text-white">
+			
+			
+			
+			</div>
+		
+		</div>
+		
+	
+	</div>
+
+<hr>
+
+
+   
+
+<?php
+
+
+    //Then the DB is closed
+$conn->close();
+?>
+
+
 <footer class="text-light bg-dark text-right pt-2">
     <h5 class="display-5">&copy Chester Meedi, 03/21/2022 ALL RIGHTS RESERVED</h5>
 </footer>
+</body>
 
-  </body>
 </html>
