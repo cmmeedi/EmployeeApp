@@ -96,20 +96,30 @@ include "db_connector.php";
 <hr>
 	
 	<div class="container">
-		<div class="row">
-			<div class="col-8">
+		<div class="row justify-content-center">
+			<div class="col-12">
 	<?php   
-	include "time_And_Date.php";
+	date_default_timezone_set("America/Los_Angeles");
+	
+	$currentTime = date("h:i:sa");
+	$currentDate = date("Y-m-d");
+	
+	echo "<h2 class='display-2 text-center'>" . $currentTime . "</h2>";
+	echo "<h4 class='display-4 text-center'>" . $currentDate . "</h4><br>";
 	?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-8">
-				<button class="btn btn-dark btn-sm m-1">Clock-In</button>
-				<button class="btn btn-outline-dark btn-sm m-1">Lunch-Out</button>
-				<button class="btn btn-outline-dark btn-sm m-1">Lunch-In</button>
-				<button class="btn btn-dark btn-sm m-1">Clock-Out</button>
-			</div>
+	<div class="container">
+		<div class="row justify-content-center">
+    			<div class="col-4">
+    				<button class="btn btn-dark btn-sm m-1">Clock-In</button>
+    				<button class="btn btn-outline-dark btn-sm m-1">Lunch-Out</button>
+    			</div>
+    			<div class="col-4">
+    				<button class="btn btn-outline-dark btn-sm m-1">Lunch-In</button>
+    				<button class="btn btn-dark btn-sm m-1">Clock-Out</button>
+    			</div>
+    		</div>
 		</div>
 <?php
 
