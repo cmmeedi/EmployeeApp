@@ -56,43 +56,42 @@ include "db_connector.php";
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="add_Employee.php">Add Employee</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="all_Employees.php">All Employees</a>
-				</li>
-			</ul>
-			<a href="employee_Login.php" class="btn btn-light">Login</a>
-        	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
+
+		<div id="login" class="container justify-content-end">
+			<div class="row">
+				<div class="col-12">
+					<a href="employee_Login.php" class="btn btn-light">Login</a>
+<!--         			<a href="add_Employee.php" class="btn btn-outline-light">Add</a> -->
+				</div>
+			</div>
+        </div>
 		</div>
 	</nav>
 </header>
 
 <!-- This is the form to allow the user to search for keywords to pull up jokes containing those keywords within the db -->
-    <div id="employeeSearch" class="container">
-      <form action="search_employee.php">
-        <div class="form-group">
-          <label for="employee" class="display-4"> Search for employee </label>
-          <input
-            type="text"
-            class="form-control col-4"
-            id="employee"
-            name="employee"
-            aria-describedby="employeeSearch"
-          />
-          <small id="employeeSearchHelp" class="form-text text-muted"
-            >Enter the employee you would like to search</small
-          >
-        </div>
+<!--     <div id="employeeSearch" class="container"> -->
+<!--       <form action="search_employee.php"> -->
+<!--         <div class="form-group"> -->
+<!--           <label for="employee" class="display-4"> Search for employee </label> -->
+<!--           <input -->
+<!--             type="text" -->
+<!--             class="form-control col-4" -->
+<!--             id="employee" -->
+<!--             name="employee" -->
+<!--             aria-describedby="employeeSearch" -->
+<!--           /> -->
+<!--           <small id="employeeSearchHelp" class="form-text text-muted" -->
+<!--             >Enter the employee you would like to search</small -->
+<!--           > -->
+<!--         </div> -->
         
-        <button type="submit" class="btn btn-primary">Search</button>
+<!--         <button type="submit" class="btn btn-primary">Search</button> -->
         
-      </form>
-    </div>
+<!--       </form> -->
+<!--     </div> -->
 
-<hr>
+<!-- <hr> -->
 
 
    

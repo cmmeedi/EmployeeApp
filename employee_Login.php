@@ -51,15 +51,21 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="add_Employee.php">Add Employee</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="all_Employees.php">All Employees</a>
-				</li>
+<!-- 				<li class="nav-item"> -->
+<!-- 					<a class="nav-link" href="add_Employee.php">Add Employee</a> -->
+<!-- 				</li> -->
+<!-- 				<li class="nav-item"> -->
+<!-- 					<a class="nav-link" href="all_Employees.php">All Employees</a> -->
+<!-- 				</li> -->
 			</ul>
-			<a href="employee_Login.php" class="btn btn-light">Login</a>
-        	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
+		<div id="login" class="container justify-content-end">
+			<div class="row">
+				<div class="col-12">
+<!-- 					<a href="employee_Login.php" class="btn btn-light">Login</a> -->
+<!--         			<a href="add_Employee.php" class="btn btn-outline-light">Add</a> -->
+				</div>
+			</div>
+        </div>
 		</div>
 	</nav>
 </header>

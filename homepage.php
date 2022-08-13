@@ -1,8 +1,3 @@
-<?php
-session_start();
-
-?>
-
 <html>
 
 <head>
@@ -68,43 +63,48 @@ include "db_connector.php";
 				<li class="nav-item">
 					<a class="nav-link" href="all_Employees.php">All Employees</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="profile_Page.php">My Profile</a>
+				</li>
+				
 			</ul>
-			<a href="employee_Login.php" class="btn btn-light">Login</a>
-        	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
+		<div id="login" class="container justify-content-end">
+			<div class="row">
+				<div class="col-12">
+					<a href="employee_Login.php" class="btn btn-light">Logout</a>
+        			<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
+				</div>
+			</div>
+        </div>
 		</div>
-        <div class="container justify-content-end">
-          <div class="row">
-            <div class="col-12">
-              <p class="text-white">
-              	<?php
-				echo "Welcome " . $_COOKIE['logged_User'] . "<br>";
-				?>
-              </p>
-         </div>
-         
-         <div class="row">
-         	<div class="col-12">
-         		<a href="profile_Page.php" class="btn btn-outline-light btn-sm">HomePage</a>
-         	</div>
-         </div>
 	</nav>
 </header>
 
-	<p class="display-4 mt-3">This is your profile settings Page</p>
+This is the form to allow the user to search for keywords to pull up jokes containing those keywords within the db
+    <div id="employeeSearch" class="container">
+      <form action="search_employee.php">
+        <div class="form-group">
+          <label for="employee" class="display-4"> Search for employee </label>
+          <input
+            type="text"
+            class="form-control col-4"
+            id="employee"
+            name="employee"
+            aria-describedby="employeeSearch"
+          />
+          <small id="employeeSearchHelp" class="form-text text-muted"
+            >Enter the employee you would like to search</small
+          >
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Search</button>
+        
+      </form>
+    </div>
 
 <hr>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-			<form action="add_Picture_Process.php" method="POST">
-				<h3 class="display-3">Add Picture</h3>
-				<input id="pictureFile" type="file">
-				<a class="btn btn-primary">Add Picture</a>
-			</form>
-			</div>
-		</div>
-	</div>
+
    
 
 <?php

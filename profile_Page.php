@@ -69,7 +69,6 @@ include "db_connector.php";
 					<a class="nav-link" href="all_Employees.php">All Employees</a>
 				</li>
 			</ul>
-			<a href="employee_Login.php" class="btn btn-light">Login</a>
         	<a href="add_Employee.php" class="btn btn-outline-light">Add</a>
 		</div>
         <div class="container justify-content-end">
@@ -78,16 +77,20 @@ include "db_connector.php";
               <p class="text-white">
               	<?php
 				echo "Welcome " . $_COOKIE['logged_User'] . "<br>";
+                
+				echo " is an admin " . $_COOKIE['isAdmin'];
 				?>
               </p>
          </div>
-         
-         <div class="row">
-         	<div class="col-12">
-         		<a href="employee_Settings.php" class="btn btn-outline-light btn-sm">Settings</a>
-				<a href="time_Clock.php" class="btn btn-outline-light btn-sm">TimeClock</a>
-         	</div>
-         </div>
+         <div class="container justify-content-end">
+             <div class="row">
+             	<div class="col-12">
+             		<a href="employee_Login.php" class="btn btn-light">Logout</a>
+             		<a href="employee_Settings.php" class="btn btn-outline-light btn-sm">Settings</a>
+    				<a href="time_Clock.php" class="btn btn-outline-light btn-sm">TimeClock</a>
+             	</div>
+             </div>
+		</div>             
 	</nav>
 </header>
 

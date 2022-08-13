@@ -34,16 +34,24 @@ if($result->num_rows > 0){
             echo "Cookie named '" . $name . "' is not set!";
         }else{
             echo "Success!!!";
+            
+            //Test code___
             echo "Cookie '" . $name . "' is set!<br>";
             echo "Value is: " . $_COOKIE[$name];
+            //Test code^^^
+            
             $_SESSION['sesh'] = true;
             echo "<hr>";
+            
+            //Test Code ___
             echo "You are now logged in " . $username;
-            echo "<br> <a href='profile_Page.php'>Profile</a>";
+            //Test Code ^^^
+            
+            include "homepage.php";
             //This will start a session for the user
         }
         
 
 }
-echo "<br>";
-echo "<a href='index.php'>Home</a>";
+// echo "<br>";
+// echo "<a href='index.php'>Home</a>";
