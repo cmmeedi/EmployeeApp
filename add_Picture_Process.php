@@ -45,15 +45,6 @@ else{
     $statusMsg = "Please select a file to upload.";
 }
 
-echo $statusMsg;
-
-
-
-
-$pic = $_GET['pictureFile'];
-
-//This is going to be used to validate the file is a picture
-pathinfo();
-
-//This is going to be used to upload the file to the DB
-move_uploaded_file($filename, $destination);
+if($_SESSION){
+    echo $_SESSION[$statusMsg];
+}

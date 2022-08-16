@@ -101,6 +101,10 @@ include "db_connector.php";
 
 <?php
 
+echo "<pre>";
+print_r($_SESSION);
+echo "<pre>";
+
 
     //Then the DB is closed
 $conn->close();

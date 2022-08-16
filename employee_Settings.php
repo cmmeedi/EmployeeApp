@@ -116,6 +116,9 @@ include "db_connector.php";
 					<?php 
 					       //This is where the message will appear based on success or failure
 // 					   echo $statusMsg
+
+					include 'add_Picture_Process.php';
+					
 					?>
 				</h4>
 			</div>

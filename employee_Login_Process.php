@@ -26,8 +26,12 @@ if($result->num_rows > 0){
     
     $value = $username; //The cookie will display the username
     
+    $pic = 'pic';
+    
+    $pValue = $row['id'];
+    
     //Then the cookie is set
-    setcookie($name, $value);
+    setcookie($name, $value, $pic, $pValue);
         //time() + (86400),/* this sets the cookie for one day */
         //"/"); /* this allows the cookie to be accessed by the entire site */
     
