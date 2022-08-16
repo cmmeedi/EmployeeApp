@@ -10,9 +10,11 @@ Insert image file name in the MySQL database using PHP.
 Upload status will be shown to the user.
 */
 
-
+//This is the folder the images are going to be stored in within the program
 $targetDir = "uploads/";
-$fileName = $targetDir . basename($_FILES["file"]["name"]);
+//This is the file name "bob_law_blah.jpeg"
+$fileName = basename($_FILES["file"]["name"]);
+//This is the file path "uploads/bob_law_blah.jpeg"
 $targetFilePath = $targetDir . $fileName;
 $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
 
@@ -23,7 +25,7 @@ if(isset($_POST["submit"])/* && !empty($_FILES["file"]["name"])*/){
         //then it gets uploaded to the server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             //The file is inserted into the table
-            $insert = $conn->query("INSERT INTO profile_images (file_name, uploaded_on) VALUES ('" . $fileName . "', NOW())");
+            $insert = $conn->query("INSERT INTO images_test (image, time) VALUES ('" . $fileName . "', NOW())");
             if($insert){
                 $statusMsg = "The file " . $fileName . " has been uploaded successfully";
             }
