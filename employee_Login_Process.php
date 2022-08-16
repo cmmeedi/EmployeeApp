@@ -17,6 +17,7 @@ if($result->num_rows > 0){
     echo "no one";
     //This will end the session
     $_SESSION['sesh'] = false;
+    die;
 }else{
     $row = $result->fetch_assoc();
     
@@ -49,6 +50,10 @@ if($result->num_rows > 0){
             
             include "homepage.php";
             //This will start a session for the user
+            
+            echo "<pre>";
+            print_r($_SESSION);
+            echo "<pre>";
         }
         
 

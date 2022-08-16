@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'NEEDED.php';
 
 ?>
 
@@ -96,14 +96,29 @@ include "db_connector.php";
 
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-			<form action="add_Picture_Process.php" method="POST">
+			<div class="col-6">
+			<form action="add_Picture_Process.php" method="POST" enctype="multipart/form-data">
 				<h3 class="display-3">Add Picture</h3>
-				<input id="pictureFile" type="file">
-				<a class="btn btn-primary">Add Picture</a>
+				<input id="pictureFile" type="file" name="file">
+				<button type="submit" name="submit" class="btn btn-primary">Add Picture</button>
 			</form>
 			</div>
+			
+			<div class="col-5">
+			
+<!-- 				The image should appear here to let the user view the file they are uploading before it is sent to the server -->
+			
+			</div>
+
 		</div>
+			<div class="row">
+				<h4 class='display-4'>
+					<?php 
+					       //This is where the message will appear based on success or failure
+// 					   echo $statusMsg
+					?>
+				</h4>
+			</div>
 	</div>
    
 

@@ -1,6 +1,5 @@
 <?php 
-session_start();
-
+include "NEEDED.php";
 ?>
 
 <html>
@@ -77,8 +76,6 @@ include "db_connector.php";
               <p class="text-white">
               	<?php
 				echo "Welcome " . $_COOKIE['logged_User'] . "<br>";
-                
-				echo " is an admin " . $_COOKIE['isAdmin'];
 				?>
               </p>
          </div>
