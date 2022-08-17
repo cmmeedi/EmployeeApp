@@ -72,7 +72,8 @@
 
 	<!-- This is the form to allow the user to add a joke with an answer -->
     <div id="add_Employee" class="container">
-        <form action="employee_Login_Process.php" method="GET">
+<!--         <form action="employee_Login_Process.php" method="GET"> -->
+                <form action="employee_login_Process_Test.php" method="GET">
         
           <div class="form-group">
             <label for="EmployeeLogin" class="display-4 mt-5">Employee Login</label>
@@ -80,7 +81,7 @@
             <label for="EMPLOYEE_NAME"> Username </label>
             <input
               type="text"
-              class="form-control col-3"
+              class="form-control col-s3"
               id="EMPLOYEE_NAME"
               name="EMPLOYEE_NAME"
               aria-describedby="EMPLOYEE_NAME"

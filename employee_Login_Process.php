@@ -26,23 +26,33 @@ if($result->num_rows > 0){
     
     $value = $username; //The cookie will display the username
     
-    $pic = 'pic';
+        //I'd like to pull the picure column from the DB to be able to set as a cookie
+//     $pic = 'pic';
     
-    $pValue = $row['id'];
+//     $pValue = $row['id'];
+    
+//     setcookie($pic, $pValue);
     
     //Then the cookie is set
-    setcookie($name, $value, $pic, $pValue);
+    setcookie($name, $value);
         //time() + (86400),/* this sets the cookie for one day */
         //"/"); /* this allows the cookie to be accessed by the entire site */
     
         if(!isset($_COOKIE[$name])){
+            
             echo "Cookie named '" . $name . "' is not set!";
         }else{
+            
+            
             echo "Success!!!";
+            echo "<br>";
             
             //Test code___
             echo "Cookie '" . $name . "' is set!<br>";
             echo "Value is: " . $_COOKIE[$name];
+            echo "<br>";
+//             echo "Cookie '" . $pic . "' is set!<br>";
+            echo "value is: " . $_COOKIE[$name];
             //Test code^^^
             
             $_SESSION['sesh'] = true;
